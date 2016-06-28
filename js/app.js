@@ -18,9 +18,21 @@ for(var i = 1; i <= 12; i++){
 var options = {
     // optionName: 'option value'
     // for example:
-    index: 0 // start at first slide
+    index: 0, // start at first slide
+	arrowKeys : true,
+	closeEl:true,
+	captionEl: true,
+	fullscreenEl: true,
+	zoomEl: true,
+	shareEl: true,
+	counterEl: true,
+	arrowEl: true,
+	preloaderEl: true,
 };
 
 // Initializes and opens PhotoSwipe
 var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-gallery.init();
+
+//gallery.init();
+
+
