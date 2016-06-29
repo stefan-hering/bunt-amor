@@ -26,4 +26,15 @@
 		<li><a href="#">[facebook]</a></li>
 		<li><a href="#">[twitter]</a></li>
 	</ul>
-	
+
+	<div class="row">
+		<div class="menu-centered">
+			<?php
+			wp_nav_menu( array(
+				'menu'           => 'main',
+				'theme_location' => 'primary',
+				'menu_class'     => 'menu main',
+				'container'      => false
+			 ) );
+			?>
+		</div>
