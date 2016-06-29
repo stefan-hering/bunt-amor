@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 /wp-config.php
 /css
+/wp-content/uploads
