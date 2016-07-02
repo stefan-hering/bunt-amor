@@ -3,7 +3,7 @@
 function buntamor_scripts() {
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
 	
-	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', '/js/app.min.js', array(), '20160412', true );
+	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', '/js/buntamor.min.js', array(), '20160412', true );
 }
 add_action( 'wp_enqueue_scripts', 'buntamor_scripts' );
 

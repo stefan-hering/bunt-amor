@@ -22,14 +22,14 @@ gulp.task('sass', function() {
 });
 
 
-gulp.task('compress', function (cb) {
+gulp.task('compress', function () {
 	var options = {
 		compress: true,
 		mangle: true,
 		concat : true,
 		preserveComments : false
 	};
-	gulp.src(
+	return gulp.src(
 		['bower_components/jquery/dist/jquery.js',
 		'bower_components/foundation-sites/dist/foundation.js',
 		'js/lib/photoswipe.min.js',
@@ -58,5 +58,5 @@ gulp.task('compress', function (cb) {
 gulp.task('default', function() {
 	gulp.start('sass','compress');
 	gulp.watch('./scss/', ['sass']);
-	gulp.watch('js', ['compress']);
+	gulp.watch('./js/', ['compress']);
 });
