@@ -1,7 +1,14 @@
 
 #gallery {
 	text-align : center;
+	figure {
+		margin : 0;
+	}
 	figcaption {
 		display : none;
 	}
+}
+
+.grid-sizer {
+	width : 8.333%;
 }

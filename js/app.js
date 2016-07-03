@@ -25,16 +25,12 @@ if(typeof galleryImages !== 'undefined'){
 	gallery.init();
 }
 
-
 var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-    // parse slide data (url, title, size ...) from DOM elements 
-    // (children of gallerySelector)
-    var parseThumbnailElements = function(el) {
+	var parseThumbnailElements = function(el) {
 		var $el = $(el),
 			items = [];
 				
-		$el.children().each(function(){
+		$el.children('figure').each(function(){
 			$child = $(this);
 			
 			item = {
@@ -152,10 +148,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
     };
-
 	
 	var $gallery = $(gallerySelector);
-	console.log($gallery);
 	
     $gallery.data('pswp-uid', 1);	
 	$gallery.find('a').on('click',onThumbnailsClick);
@@ -169,3 +163,15 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('#gallery');
+
+
+var $masonryGrid = $('#gallery').masonry({
+  itemSelector: '.image',
+  columnWidth: '.grid-sizer',
+  percentPosition : true
+});
+
+// layout Masonry after each image loads
+$masonryGrid.imagesLoaded().progress( function() {
+  $masonryGrid.masonry('layout');
+});

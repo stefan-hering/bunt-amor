@@ -3,8 +3,7 @@
  * Template Name: Gallery
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage buntamor
  */ ?>
  
  <?php get_header(); ?>

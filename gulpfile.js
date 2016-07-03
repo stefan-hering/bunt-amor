@@ -34,24 +34,11 @@ gulp.task('compress', function () {
 		'bower_components/foundation-sites/dist/foundation.js',
 		'js/lib/photoswipe.min.js',
 		'js/lib/photoswipe-ui-default.min.js',
+		'js/lib/masonry.pkgd.min.js',
+		'js/lib/imagesloaded.pkgd.min.js',
 		'js/app.js'])
 	    .pipe(uglify('buntamor.min.js', options))
 		.pipe(gulp.dest('js'));
-
-    
-	/*
-	pump([
-        gulp.src(
-		['bower_components/jquery/dist/jquery.js',
-		'bower_components/foundation-sites/dist/foundation.js',
-		'js/lib/photoswipe.min.js',
-		'js/lib/photoswipe-ui-default.min.js',
-		'js/app.js']),
-        uglify(),
-        gulp.dest('js/buntamor.min.js')
-    ],
-    cb
-  );*/
 });
 
 

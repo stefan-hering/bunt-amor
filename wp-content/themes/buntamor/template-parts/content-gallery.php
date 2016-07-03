@@ -22,11 +22,19 @@ $images = get_children( $args );
 <?php if($images){ ?>
 
 <div id="gallery" class="row" itemscope itemtype="http://schema.org/ImageGallery">
+	<div class="grid-sizer"> </div>
 	<?php foreach($images as $image){ 
-		$thumbnail = wp_get_attachment_image_src($image->ID,'thumbnail');
 		$original = wp_get_attachment_image_src($image->ID,'original');
+		
+		if($original[1] > $original[2]){
+			$cssClass = 'large-3 medium-4 small-6';
+			$thumbnail = wp_get_attachment_image_src($image->ID,'horizontal-thumb');
+		} else {
+			$cssClass = 'large-2 medium-3 small-4';
+			$thumbnail = wp_get_attachment_image_src($image->ID,'vertical-thumb');
+		}
 	?>
-	    <figure class="image  large-2 small-4 columns" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+	    <figure class="image columns <?php echo $cssClass; ?>" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="<?php echo $original[0] ?>" itemprop="contentUrl" class="thumbnail">
 				<img src="<?php echo $thumbnail[0] ?>" itemprop="thumbnail" width="<?php echo $thumbnail[1] ?>" height="<?php echo $thumbnail[2] ?>" alt="Short desc TODO" />
 			</a>
