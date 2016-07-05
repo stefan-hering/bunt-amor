@@ -36,14 +36,13 @@ $images = get_children( $args );
 	?>
 	    <figure class="image columns <?php echo $cssClass; ?>" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="<?php echo $original[0] ?>" itemprop="contentUrl" class="thumbnail">
-				<img src="<?php echo $thumbnail[0] ?>" itemprop="thumbnail" width="<?php echo $thumbnail[1] ?>" height="<?php echo $thumbnail[2] ?>" alt="Short desc TODO" />
+				<img src="<?php echo $thumbnail[0] ?>" itemprop="thumbnail" width="<?php echo $thumbnail[1] ?>" height="<?php echo $thumbnail[2] ?>" alt="<?php $image->post_excerpt ?>" />
 			</a>
 			
 			<meta itemprop="width" content="<?php echo $original[1] ?>">
 			<meta itemprop="height" content="<?php echo $original[2] ?>">
 
-			<figcaption itemprop="caption description">Long image description <span itemprop="copyrightHolder">Photo: AP</span>
-			</figcaption>
+			<figcaption itemprop="caption description"><?php $image->post_content ?></figcaption>
 		</figure>
 	<?php } ?>
 </div>
@@ -104,35 +103,6 @@ $images = get_children( $args );
 </div>
 
 <script>
-/*
-var galleryImages = [
-	<?php foreach($images as $image){ 
-		$original = wp_get_attachment_image_src($image->ID,'original');
-	?>
-	{
-			src: '<?php echo $original[0] ?>',
-			w: <?php echo $original[1] ?>,
-			h: <?php echo $original[2] ?>
-	},
-	<?php } ?>
-];*/
-</script>
+
 <?php } ?>
 
-<?php
-			/* translators: %s: Name of current post 
-			the_content( sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-				get_the_title()
-			) );
-
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
-			*/
-		?>
