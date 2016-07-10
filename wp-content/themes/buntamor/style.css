@@ -1256,12 +1256,12 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #AFAFAF;
+  color: #FFFFFF;
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
   a:hover, a:focus {
-    color: #979797; }
+    color: #dbdbdb; }
   a img {
     border: 0; }
 
@@ -1486,10 +1486,10 @@ kbd {
       background-color: #f7197d;
       color: #0a0a0a; }
   .button.secondary {
-    background-color: #AFAFAF;
+    background-color: #FFFFFF;
     color: #0a0a0a; }
     .button.secondary:hover, .button.secondary:focus {
-      background-color: #8c8c8c;
+      background-color: #cccccc;
       color: #0a0a0a; }
   .button.success {
     background-color: #3adb76;
@@ -1524,11 +1524,11 @@ kbd {
         border-color: #a4064d;
         color: #a4064d; }
     .button.hollow.secondary {
-      border: 1px solid #AFAFAF;
-      color: #AFAFAF; }
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #585858;
-        color: #585858; }
+        border-color: gray;
+        color: gray; }
     .button.hollow.success {
       border: 1px solid #3adb76;
       color: #3adb76; }
@@ -2018,7 +2018,7 @@ select {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: #AFAFAF transparent transparent;
+  border-color: #FFFFFF transparent transparent;
   border-top-style: solid;
   border-bottom-width: 0;
   right: 5px;
@@ -2051,7 +2051,7 @@ select {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent #AFAFAF transparent transparent;
+  border-color: transparent #FFFFFF transparent transparent;
   border-right-style: solid;
   border-left-width: 0; }
 
@@ -2061,7 +2061,7 @@ select {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent transparent transparent #AFAFAF;
+  border-color: transparent transparent transparent #FFFFFF;
   border-left-style: solid;
   border-right-width: 0; }
 
@@ -2083,7 +2083,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: #AFAFAF transparent transparent;
+    border-color: #FFFFFF transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     right: 5px;
@@ -2105,7 +2105,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #AFAFAF transparent transparent;
+    border-color: transparent #FFFFFF transparent transparent;
     border-right-style: solid;
     border-left-width: 0; }
   .dropdown.menu.medium-vertical > li.opens-right > a::after {
@@ -2114,7 +2114,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #AFAFAF;
+    border-color: transparent transparent transparent #FFFFFF;
     border-left-style: solid;
     border-right-width: 0; } }
 
@@ -2136,7 +2136,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: #AFAFAF transparent transparent;
+    border-color: #FFFFFF transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     right: 5px;
@@ -2158,7 +2158,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #AFAFAF transparent transparent;
+    border-color: transparent #FFFFFF transparent transparent;
     border-right-style: solid;
     border-left-width: 0; }
   .dropdown.menu.large-vertical > li.opens-right > a::after {
@@ -2167,7 +2167,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #AFAFAF;
+    border-color: transparent transparent transparent #FFFFFF;
     border-left-style: solid;
     border-right-width: 0; } }
 
@@ -2216,7 +2216,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #AFAFAF transparent transparent;
+    border-color: transparent #FFFFFF transparent transparent;
     border-right-style: solid;
     border-left-width: 0; }
   .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
@@ -2225,7 +2225,7 @@ select {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #AFAFAF;
+    border-color: transparent transparent transparent #FFFFFF;
     border-left-style: solid;
     border-right-width: 0; }
   .is-dropdown-submenu .is-dropdown-submenu {
@@ -3611,12 +3611,23 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
 
-.social-media {
-  background: #F95AA2; }
+.hero-banner {
+  background: url("/wp-content/uploads/buntamor/hero-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(40vw + 200px);
+  max-height: 700px; }
 
-.main.menu {
-  margin-top: 0.5em;
-  font-size: 150%; }
+.social-media {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.menu {
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5); }
+  .menu.main {
+    font-size: 150%; }
 
 #gallery {
   text-align: center; }
