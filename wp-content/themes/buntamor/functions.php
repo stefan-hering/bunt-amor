@@ -11,6 +11,7 @@ function buntamor_thumbs(){
     add_image_size( 'horizontal-thumb', 300, 9999, false );
 }
 
+
 add_action( 'after_setup_theme', 'buntamor_thumbs' );
 
 add_action( 'wp_enqueue_scripts', 'buntamor_scripts' );

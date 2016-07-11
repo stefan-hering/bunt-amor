@@ -21,8 +21,8 @@
   </head>
   
 <body <?php body_class(); ?>>
-	<div class="hero-banner">
-		<div class="menu-centered">
+	<header class="hero-banner">
+		<div class="menu-centered menubar">
 			<?php
 			wp_nav_menu( array(
 				'menu'           => 'main',
@@ -36,6 +36,6 @@
 				<li><a href="#">[facebook]</a></li>
 				<li><a href="#">[twitter]</a></li>
 			</ul>
-	</div>
+	</header>
 	
-	<div class="row">
+	<div class="row content">
