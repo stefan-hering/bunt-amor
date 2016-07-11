@@ -9,6 +9,12 @@
 				 ) );
 				?>
 			</div>
+			<div class="copyright">
+				&copy; <?php 
+					  $fromYear = 2016; 
+					  $thisYear = (int)date('Y'); 
+					  echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Bliss Fotografie.
+			</div>
 		</footer>
 	</div>
 
