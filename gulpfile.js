@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglifyjs');
 var pump = require('pump');
+var cleanCSS = require('gulp-clean-css');
 var $    = require('gulp-load-plugins')();
  
 
@@ -10,7 +11,7 @@ var sassPaths = [
 ];
 
 gulp.task('sass', function() {
-  return gulp.src('scss/style.scss')
+  return gulp.src('scss/style.scss') 
     .pipe($.sass({
       includePaths: sassPaths
     })
@@ -18,11 +19,11 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('wp-content/themes/buntamor'));
+    .pipe(gulp.dest('css'));
 });
 
 
-gulp.task('compress', function () {
+gulp.task('compressjs', function () {
 	var options = {
 		compress: true,
 		mangle: true,
@@ -41,9 +42,15 @@ gulp.task('compress', function () {
 		.pipe(gulp.dest('js'));
 });
 
+gulp.task('compresscss', function() {
+  return gulp.src('css/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('wp-content/themes/buntamor'));
+});
 
 gulp.task('default', function() {
-	gulp.start('sass','compress');
+	gulp.start('sass','compressjs','compresscss');
 	gulp.watch(['scss/**/*.scss'], ['sass']);
-	gulp.watch(['js/**/*.js'], ['compress']);
+//	gulp.watch(['js/**/*.js'], ['compressjs']);
+	gulp.watch(['css/style.css'], ['compresscss']);
 });
