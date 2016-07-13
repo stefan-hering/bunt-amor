@@ -51,6 +51,6 @@ gulp.task('compresscss', function() {
 gulp.task('default', function() {
 	gulp.start('sass','compressjs','compresscss');
 	gulp.watch(['scss/**/*.scss'], ['sass']);
-//	gulp.watch(['js/**/*.js'], ['compressjs']);
+	gulp.watch(['js/**/*.js'], ['compressjs']);
 	gulp.watch(['css/style.css'], ['compresscss']);
 });

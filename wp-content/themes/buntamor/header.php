@@ -22,7 +22,11 @@
   
 <body <?php body_class(); ?>>
 	<header class="hero-banner">
-		<div class="menu-centered menubar">
+		<div class="menubar">
+			<div class="title-bar" data-responsive-toggle="menu-main" data-hide-for="large">
+			  <button class="menu-icon" type="button" data-toggle></button>
+			  <div class="title-bar-title">Menu</div>
+			</div>
 			<?php
 			wp_nav_menu( array(
 				'menu'           => 'main',
@@ -31,11 +35,11 @@
 				'container'      => false
 			 ) );
 			?>
-		</div>
-			<ul class="menu align-right social-media">
+			<ul class="menu social-media">
 				<li><a href="#">[facebook]</a></li>
 				<li><a href="#">[twitter]</a></li>
 			</ul>
+		</div>
 	</header>
 	
 	<div class="row content">

@@ -102,7 +102,5 @@ $images = get_children( $args );
 
 </div>
 
-<script>
-
 <?php } ?>
 
