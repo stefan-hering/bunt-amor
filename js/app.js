@@ -88,7 +88,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             gallery = $('#gallery'),
             options,
             items;
-
+			
         items = parseThumbnailElements(gallery);
 
         // define options (if needed)
@@ -109,7 +109,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             getThumbBoundsFn: function(index) {
                 // See Options -> getThumbBoundsFn section of documentation for more info
                 var pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = $($('#gallery').children().get(index)).find('img')[0].getBoundingClientRect();
+                    rect = $($('#gallery').children('figure').get(index)).find('img')[0].getBoundingClientRect();
 				
                 return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
             }
@@ -129,10 +129,10 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 }
             } else {
                 // in URL indexes start from 1
-                options.index = parseInt(index, 10) - 1;
+                options.index = parseInt(index, 10) - 2;
             }
         } else {
-            options.index = parseInt(index, 10);
+            options.index = parseInt(index, 10) - 1;
         }
 
         // exit if index not found
@@ -157,7 +157,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // Parse URL and open gallery if it contains #&pid=3&gid=1
     var hashData = photoswipeParseHash();
     if(hashData.pid && hashData.gid) {
-        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid], true, true );
     }
 };
 
