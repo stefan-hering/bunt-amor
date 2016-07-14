@@ -1,7 +1,7 @@
 <?php 
 
 function buntamor_scripts() {
-	wp_enqueue_style( 'buntamor-style', get_stylesheet_uri() );
+	//wp_enqueue_style( 'buntamor-style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'buntamor-js', '/js/buntamor.min.js', array(), '20160412', true );
 }

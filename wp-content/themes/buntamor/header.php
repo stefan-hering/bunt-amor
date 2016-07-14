@@ -18,17 +18,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">	
 	<?php wp_head(); ?>
+	<style>
 	<?php 
+		include 'style.css';
 		$bodyClass = '';
 		if($pagename){
 		$filename = 'wp-content/uploads/buntamor/' . $pagename . '-banner.jpg';
 		
 		if(file_exists($filename)){
-			echo '<style>header.hero-banner {background-image: url(\'/' . $filename . '\')};</style>';
+			echo 'header.hero-banner {background-image: url(\'/' . $filename . '\')};';
 		} else {
 			$bodyClass = 'no-hero';
 		}
 	}?>
+	</style>
   </head>
   
 <body <?php body_class($bodyClass); ?>>
