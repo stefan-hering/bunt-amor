@@ -5,7 +5,7 @@
 	height: 40px;
 	display: table-cell;
 	background : url('/wp-content/uploads/buntamor/menubar-logo.png') center 0px no-repeat;
-	background-size : 170px;
+	background-size : 155px;
 }
 
 
@@ -63,4 +63,15 @@ header {
 		color : $white;
 		margin-left : 4px;
 	}
+}
+
+.no-hero > .hero-banner {
+	background-image : none;
+	height : auto;
+	min-height : auto;
+	max-height : none;
+	.menubar {
+		background: rgba(115,115,115,0.3);
+		text-shadow: none;
+	} 
 }
