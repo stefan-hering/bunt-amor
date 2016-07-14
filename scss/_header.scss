@@ -79,7 +79,7 @@ header {
 .no-hero > .hero-banner {
 	background-image : none;
 	height : auto;
-	min-height : auto;
+	min-height : 0;
 	max-height : none;
 	.menubar {
 		background: rgba(115,115,115,0.3);

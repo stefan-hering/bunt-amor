@@ -17,7 +17,8 @@
 			</div>
 		</footer>
 	</div>
-
+	
+	<link rel="stylesheet" id="buntamor-style-full-css" href="/wp-content/themes/buntamor/style-full.css?ver=4.5.3" type="text/css" media="all">
 	<?php wp_footer(); ?>
 	</body>
 </html>

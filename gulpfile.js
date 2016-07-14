@@ -11,7 +11,7 @@ var sassPaths = [
 ];
 
 gulp.task('sass', function() {
-  return gulp.src('scss/style.scss') 
+  return gulp.src('scss/style*.scss') 
     .pipe($.sass({
       includePaths: sassPaths
     })
@@ -43,7 +43,7 @@ gulp.task('compressjs', function () {
 });
 
 gulp.task('compresscss', function() {
-  return gulp.src('css/style.css')
+  return gulp.src('css/style*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('wp-content/themes/buntamor'));
 });
@@ -51,6 +51,6 @@ gulp.task('compresscss', function() {
 gulp.task('default', function() {
 	gulp.start('sass','compressjs','compresscss');
 	gulp.watch(['scss/**/*.scss'], ['sass']);
-	gulp.watch(['js/**/*.js'], ['compressjs']);
-	gulp.watch(['css/style.css'], ['compresscss']);
+	//gulp.watch(['js/**/*.js'], ['compressjs']);
+	gulp.watch(['css/style*.css'], ['compresscss']);
 });
