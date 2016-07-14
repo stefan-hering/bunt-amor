@@ -27,14 +27,14 @@ $images = get_children( $args );
 		$original = wp_get_attachment_image_src($image->ID,'original');
 		
 		if($original[1] > $original[2]){
-			$cssClass = 'large-3 medium-4 small-6';
+			$cssClass = 'horizontal';
 			$thumbnail = wp_get_attachment_image_src($image->ID,'horizontal-thumb');
 		} else {
-			$cssClass = 'large-2 medium-3 small-4';
+			$cssClass = 'vertical';
 			$thumbnail = wp_get_attachment_image_src($image->ID,'vertical-thumb');
 		}
 	?>
-	    <figure class="image columns <?php echo $cssClass; ?>" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+	    <figure class="image <?php echo $cssClass; ?>" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="<?php echo $original[0] ?>" itemprop="contentUrl" class="thumbnail">
 				<img src="<?php echo $thumbnail[0] ?>" itemprop="thumbnail" width="<?php echo $thumbnail[1] ?>" height="<?php echo $thumbnail[2] ?>" alt="<?php $image->post_excerpt ?>" />
 			</a>

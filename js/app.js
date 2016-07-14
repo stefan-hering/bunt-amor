@@ -165,13 +165,19 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 initPhotoSwipeFromDOM('#gallery');
 
 
-var $masonryGrid = $('#gallery').masonry({
+var $masonryGrid = $('#gallery').packery({
   itemSelector: '.image',
   columnWidth: '.grid-sizer',
-  percentPosition : true
+  percentPosition: true,
+  gutter : 0
 });
 
 // layout Masonry after each image loads
 $masonryGrid.imagesLoaded().progress( function() {
-  $masonryGrid.masonry('layout');
+  $masonryGrid.packery('layout');
+});
+
+$('#menu-toggle').on('click', function(){
+	console.log('junge');
+	$('#menu-main').toggle();
 });

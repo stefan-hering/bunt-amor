@@ -34,9 +34,10 @@
 <body <?php body_class($bodyClass); ?>>
 	<header class="hero-banner">
 		<div class="menubar">
-			<div class="title-bar" data-responsive-toggle="menu-main" data-hide-for="large">
-			  <button class="menu-icon" type="button" data-toggle></button>
-			  <div class="title-bar-title">Menu</div>
+			<div class="title-bar">
+				<span id="menu-toggle">
+					<button class="menu-icon" type="button" ></button>
+				</span>
 			</div>
 			<?php
 			wp_nav_menu( array(

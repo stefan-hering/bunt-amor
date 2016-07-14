@@ -35,7 +35,7 @@ gulp.task('compressjs', function () {
 		'bower_components/foundation-sites/dist/foundation.js',
 		'js/lib/photoswipe.min.js',
 		'js/lib/photoswipe-ui-default.min.js',
-		'js/lib/masonry.pkgd.min.js',
+		'js/lib/packery.pkgd.min.js',
 		'js/lib/imagesloaded.pkgd.min.js',
 		'js/app.js'])
 	    .pipe(uglify('buntamor.min.js', options))

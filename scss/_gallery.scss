@@ -10,5 +10,39 @@
 }
 
 .grid-sizer {
-	width : 8.333%;
+	width : 1%;
 }
+
+.image {
+	@include breakpoint(small) {
+		&.horizontal {
+			width : 40%;
+		}
+		&.vertical {
+			width : 20%
+		}
+	}
+	@include breakpoint(medium) {
+		&.horizontal {
+			width : 21%;
+		}
+		&.vertical {
+			width : 14%;
+		}
+	}
+	@include breakpoint(large) {
+		&.horizontal {
+			width : 25%;
+		}
+		&.vertical{
+			width : 15%;
+		}
+	}
+}
+
+
+/*
+			$cssClass = 'large-3 medium-4 small-6';
+			$thumbnail = wp_get_attachment_image_src($image->ID,'horizontal-thumb');
+		} else {
+			$cssClass = 'large-2 medium-3 small-4';*/

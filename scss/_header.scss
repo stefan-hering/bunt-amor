@@ -48,6 +48,11 @@ header {
 	}
 	.title-bar {
 		display : none;
+		& > span {
+		    width: 40px;
+			height: 45px;
+			display: block;
+		}
 		@include breakpoint(medium down) {
 			display : block;
 			&:before {
@@ -59,12 +64,15 @@ header {
 	}
 	
 	.menu-icon {
-		margin : 2px 0 0 16px;
+		padding: 8px;
+		margin: 14px 0 0 16px;
 	}
 	
-	.title-bar-title {
-		color : $white;
-		margin-left : 4px;
+}
+
+@include breakpoint(medium down) {
+	#menu-main {
+		display : none;
 	}
 }
 
