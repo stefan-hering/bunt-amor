@@ -51,7 +51,7 @@
 			 ) );
 			?>
 			<ul class="menu social-media">
-				<li><a href="#">[facebook]</a></li>
+				<li><a href="http://www.facebook.com/blissfotografie.de">[facebook]</a></li>
 				<li><a href="#">[twitter]</a></li>
 			</ul>
 		</div>

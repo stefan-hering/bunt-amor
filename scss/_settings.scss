@@ -136,8 +136,8 @@ $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
+$code-background: 0;
+$code-border: 0;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $secondary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
@@ -567,10 +567,10 @@ $topbar-unstack-breakpoint: medium;
 
 
 
-//bunt-amor
+// bunt-amor
 
 $light-background-color : rgba(250,250,250,0.1);
-
+$dark-background-color : rgba(115,115,115,.3);
 
 
 

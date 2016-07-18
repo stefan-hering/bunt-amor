@@ -49,8 +49,12 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import "photoslider/main";
+@import "wordpress";
 
-@import "header";
-@import "gallery"; 
+@import "instagram";
 @import "footer";
+
+@import "photoslider/main";
+@import "gallery"; 
+@import "contact";
+
