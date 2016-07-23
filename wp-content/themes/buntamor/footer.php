@@ -2,14 +2,21 @@
 	</div>
 	<footer class="site-footer">
 		<div class="row">
-			<div class="footer-widgets">
+			<div class="footer-widget columns large-6 medium-12">
 				<?php
 				if(is_active_sidebar('footer-1')){
 					dynamic_sidebar('footer-1');
 				}
 				?>
 			</div>
-			<div class="menu-centered">
+			<div class="footer-widget columns large-6 medium-12">
+				<?php
+				if(is_active_sidebar('footer-2')){
+					dynamic_sidebar('footer-2');
+				}
+				?>
+			</div>
+			<div class="menu-centered columns">
 			
 				<?php
 				wp_nav_menu( array(
@@ -19,7 +26,7 @@
 				 ) );
 				?>
 			</div>
-			<div class="copyright">
+			<div class="copyright columns">
 				&copy; <?php 
 					  $fromYear = 2016; 
 					  $thisYear = (int)date('Y'); 

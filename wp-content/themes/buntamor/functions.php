@@ -24,6 +24,15 @@ function buntamor_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer widget 2', 'buntamor' ),
+		'id'            => 'footer-2',
+		'description'   => __( 'Its a widget and it is in the footer.', 'buntamor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 
 add_action( 'after_setup_theme', 'buntamor_thumbs' );
@@ -36,7 +45,7 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 //Instagram widget
 function instgram_widget_list_class(){
-	return 'columns large-2 medium-3 small-4';
+	return 'columns large-3 medium-2 small-4';
 }
 add_filter( 'wpiw_item_class', 'instgram_widget_list_class' );
 
