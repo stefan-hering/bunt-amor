@@ -1,9 +1,10 @@
 
 @mixin logo-pseudo {
 	content : " ";
+	float : left;
 	width: 90px;
 	height: 40px;
-	display: table-cell;
+	display: inline-block;
 	background : url('/wp-content/uploads/buntamor/menubar-logo.png') center 0px no-repeat;
 	background-size : 155px;
 }
@@ -40,6 +41,13 @@ header {
 		font-size : $global-font-size * 1.5;
 		max-width : $grid-row-width;
 		margin : 0 auto;
+		text-align : center;
+		& > .menu-item {
+			display : inline-block;
+			&:last-child  {
+				margin-right : 5%;
+			}
+		}
 		@include breakpoint(large) {
 			&:before {
 				@include logo-pseudo;
