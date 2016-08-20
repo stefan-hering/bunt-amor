@@ -67,13 +67,6 @@ header {
 		padding: 8px;
 		margin: 14px 0 0 16px;
 	}
-	
-}
-
-@include breakpoint(medium down) {
-	#menu-main {
-		display : none;
-	}
 }
 
 .no-hero > .hero-banner {
@@ -85,4 +78,34 @@ header {
 		background: $ba-color-1;
 		text-shadow: none;
 	} 
+}
+
+@include breakpoint(medium down) {
+	#menu-main {
+		display : none;
+	}
+}
+
+.social-media-icon {
+	&:before{
+		display: inline-block;
+		font-family: "Flaticon";
+		font-size : 24px;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		line-height: 1;
+		text-decoration: inherit;
+		text-rendering: optimizeLegibility;
+		text-transform: none;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+	}
+	&.facebook:before {
+		 content: "\f100";
+	}
+	&.instagram:before { 
+		content: "\f101"; 
+	}
 }
