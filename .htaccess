@@ -19,6 +19,8 @@ RewriteRule . /index.php [L]
   ExpiresByType image/gif "access plus 2592000 seconds"
   ExpiresByType image/jpeg "access plus 2592000 seconds"
   ExpiresByType image/png "access plus 2592000 seconds"
+  ExpiresByType application/font-woff "access plus 2592000 seconds"
+  ExpiresByType application/font-svg "access plus 2592000 seconds"
   ExpiresByType text/css "access plus 2592000 seconds"
   ExpiresByType text/javascript "access plus 2592000 seconds"
   ExpiresByType text/x-javascript "access plus 2592000 seconds"
