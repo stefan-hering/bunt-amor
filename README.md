@@ -1,3 +1,5 @@
-Bunt Amor website
+# Bunt Amor wordpress theme
 
-Si mi amor, de nada
+Wordpress theme for my wifes website
+
+http://www.blissfotografie.de
