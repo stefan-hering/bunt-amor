@@ -6,3 +6,17 @@ npm-debug.log
 /css
 /wp-content/uploads
 /scss/.sass-cache
+index.html
+index.php
+readme.html
+*.log.*
+wp-activate.php
+wp-admin
+wp-*.php
+wp-content/upgrade
+wp-content/index.php
+wp-content/plugins
+wp-content/themes/index.php
+wp-content/themes/twenty*
+wp-includes
+xmlrpc.php
