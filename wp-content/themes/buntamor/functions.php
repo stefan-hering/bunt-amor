@@ -49,5 +49,5 @@ function instgram_widget_list_class(){
 }
 add_filter( 'wpiw_item_class', 'instgram_widget_list_class' );
 
-
+require( 'editor-extension/extensions.php' );
 ?>

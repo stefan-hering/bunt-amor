@@ -10,6 +10,7 @@ index.html
 index.php
 readme.html
 *.log.*
+*.min.js
 wp-activate.php
 wp-admin
 wp-*.php
@@ -18,5 +19,7 @@ wp-content/index.php
 wp-content/plugins
 wp-content/themes/index.php
 wp-content/themes/twenty*
+wp-content/themes/customizr
+wp-content/languages
 wp-includes
 xmlrpc.php
