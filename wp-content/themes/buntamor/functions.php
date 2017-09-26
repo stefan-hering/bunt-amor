@@ -43,6 +43,10 @@ add_action( 'widgets_init', 'buntamor_widgets_init' );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
 
+//Remove autoformatting crap
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
 //Instagram widget
 function instgram_widget_list_class(){
 	return 'columns large-3 medium-2 small-4';

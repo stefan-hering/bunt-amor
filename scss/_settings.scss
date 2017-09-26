@@ -80,12 +80,12 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
-  large: 1024px,
+  medium: 440px,
+  large: 880px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge);
 
 // 3. The Grid
 // -----------
@@ -569,7 +569,7 @@ $topbar-unstack-breakpoint: medium;
 
 // bunt-amor
 $background-color : #F9F9F9;
-$ba-color-1 : #FFB6B2;
+$ba-color-1 : #101010;
 $ba-color-2 : #E87094;
 $ba-color-3 : #E88BA5;
 $ba-color-4 : #FFD9BB;
@@ -577,5 +577,4 @@ $ba-color-4 : #FFD9BB;
 $light-background-color : rgba(250,250,250,0.1);
 $dark-background-color : rgba(115,115,115,.3);
 
-
-
+$card-box-shadow: rgba(44,44,44,0.3);

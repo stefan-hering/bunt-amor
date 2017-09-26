@@ -9,7 +9,7 @@ function buntamor_add_buttons( $plugin_array ) {
     return $plugin_array;
 }
 function buntamor_register_buttons( $buttons ) {
-    array_push( $buttons, 'card', 'showrecent' ); 
+    array_push( $buttons, 'cards', 'cards' ); 
     return $buttons;
 }
 ?>

@@ -6,38 +6,95 @@
 article {
     background : $white;
     margin-bottom : 48px;
-    padding: 1em;
-}
+} 
 
 .entry-content {
     display: flex;
     flex-wrap: wrap;
     p {
         width: 100%; 
+    } 
+}
+
+.text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(large up){
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+}  
+
+.stripe {
+    width: 100%;
+    background-size: cover;
+    &-content {
+        @include breakpoint(large up){
+            max-width: 80vw;
+            margin: 0 auto;
+        }
     }
 }
 
 .ba-card {
     position: relative;
-    width : 25%;
-    margin : 0 4%;
-    &__text {
+    width : 27%;
+    margin : 8px 3%;
+    box-shadow: 1px 1px 4px $card-box-shadow;
+
+    &:after {
+        transition: opacity 1s ease;
+        pointer-events: none;
+        opacity: 0;
+        content: " ";
+        background-color: rgba(80,80,80,0.5);
         position: absolute;
-        bottom: 0;
+        top: 0;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+    }
+    &:hover:after {
+        opacity: 1;
+    }
+    &--bg {
+        height : 400px;
+    }
+    &--text {
+        padding-bottom: 32px;
+    }
+    &__text {
+        text-align:  center;
+        padding : 16px;
+    }
+    &__subline {
+        position: absolute;
+        bottom: 0; 
         left: 0;
         right : 0;
         text-align: center;
         padding : 8px;
         color : white;
         font-weight : bold;
-        background: rgba(244,100,240,0.3);
-    }
-    &--bg {
-        height : 400px;
+        background: $ba-color-1;
     }
     &__background {
         width: 100%;
         height : 100%;
         background-size : cover;
+    }
+
+    // Screw you wordpress
+    p {
+        display: none;
+    }
+
+    @include breakpoint(medium down) { 
+        width: 42%;
+        margin : 8px 4%;
+    }
+    
+    @include breakpoint(small down) { 
+        width: 92%;
     }
 }

@@ -57,4 +57,4 @@
 		</div>
 	</header>
 	
-	<div class="row content">
+	<div class="content">

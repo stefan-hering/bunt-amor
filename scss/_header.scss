@@ -1,120 +1,120 @@
 
 @mixin logo-pseudo {
-	content : " ";
-	float : left;
-	width: 90px;
-	height: 40px;
-	display: inline-block;
-	background : url('/wp-content/uploads/buntamor/menubar-logo.png') center 0px no-repeat;
-	background-size : 155px;
+    content : " ";
+    float : left;
+    width: 90px;
+    height: 40px;
+    display: inline-block;
+    background : url('/wp-content/uploads/buntamor/menubar-logo.png') center 0px no-repeat;
+    background-size : 155px;
 }
 
 header {
-	&.hero-banner {
-		background : url('/wp-content/uploads/buntamor/hero-banner.jpg');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		height: calc(40vw);
-		max-height: 700px;
-		min-height : 300px;
-		margin-bottom : 32px;
-	}
+    &.hero-banner {
+        background : url('/wp-content/uploads/buntamor/hero-banner.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: calc(40vw);
+        max-height: 700px;
+        min-height : 300px;
+        margin-bottom : 32px;
+    }
 
-	.social-media {
-		position : absolute;
-		top: 0;
-		right : 0;
-	}
+    .social-media {
+        position : absolute;
+        top: 0;
+        right : 0;
+    }
 
-	.menubar {
-		background: rgba(250, 250, 250, 0.22);
-		text-shadow: 0px 0px 16px rgba(150, 150, 150, 0.4);
-		text-transform: uppercase;
-		font-weight: bold;
-		a {
-			color : $white;
-		}
-	}
+    .menubar {
+        background: rgba(250, 250, 250, 0.22);
+        text-shadow: 0px 0px 16px rgba(150, 150, 150, 0.4);
+        text-transform: uppercase;
+        font-weight: bold;
+        a {
+            color : $white;
+        }
+    }
 
-	.menu.main {
-		font-size : $global-font-size * 1.5;
-		max-width : $grid-row-width;
-		margin : 0 auto;
-		text-align : center;
-		.page_item {
-			display : inline-block;
-			margin: 0 16px;
-			&:last-child  {
-				margin-right : 5%;
-			}
-		}
-		@include breakpoint(large) {
-			&:before {
-				@include logo-pseudo;
-			}
-		}
-	}
-	.title-bar {
-		display : none;
-		& > span {
-		    width: 40px;
-			height: 45px;
-			display: block;
-		}
-		@include breakpoint(medium down) {
-			display : block;
-			&:before {
-				@include logo-pseudo;
-				position: absolute;
-				left: 50px;
-			}
-		}
-	}
-	
-	.menu-icon {
-		padding: 8px;
-		margin: 14px 0 0 16px;
-	}
+    .menu.main {
+        font-size : $global-font-size * 1.5;
+        max-width : $grid-row-width;
+        margin : 0 auto;
+        text-align : center;
+        .page_item {
+            display : inline-block;
+            margin: 0 16px;
+            &:last-child  {
+                margin-right : 5%;
+            }
+        }
+        @include breakpoint(large) {
+            &:before {
+                @include logo-pseudo;
+            }
+        }
+    }
+    .title-bar {
+        display : none;
+        & > span {
+            width: 40px;
+            height: 45px;
+            display: block;
+        }
+        @include breakpoint(medium down) {
+            display : block;
+            &:before {
+                @include logo-pseudo;
+                position: absolute;
+                left: 50px;
+            }
+        }
+    }
+    
+    .menu-icon {
+        padding: 8px;
+        margin: 14px 0 0 16px;
+    }
 }
 
 .no-hero > .hero-banner {
-	background-image : none;
-	height : auto;
-	min-height : 0;
-	max-height : none;
-	.menubar {
-		background: $ba-color-1;
-		text-shadow: none;
-	} 
+    background-image : none;
+    height : auto;
+    min-height : 0;
+    max-height : none;
+    .menubar {
+        background: $ba-color-1;
+        text-shadow: none;
+    } 
 }
 
 @include breakpoint(medium down) {
-	#menu-main {
-		display : none;
-	}
+    #menu-main {
+        display : none;
+    }
 }
 
 .social-media-icon {
-	&:before{
-		display: inline-block;
-		font-family: "Flaticon";
-		font-size : 24px;
-		font-style: normal;
-		font-weight: normal;
-		font-variant: normal;
-		line-height: 1;
-		text-decoration: inherit;
-		text-rendering: optimizeLegibility;
-		text-transform: none;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		font-smoothing: antialiased;
-	}
-	&.facebook:before {
-		 content: "\f100";
-	}
-	&.instagram:before { 
-		content: "\f101"; 
-	}
+    &:before{
+        display: inline-block;
+        font-family: "Flaticon";
+        font-size : 24px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-decoration: inherit;
+        text-rendering: optimizeLegibility;
+        text-transform: none;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    &.facebook:before {
+         content: "\f100";
+    }
+    &.instagram:before { 
+        content: "\f101"; 
+    }
 }

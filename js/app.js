@@ -1,48 +1,48 @@
 $(document).foundation();
 
 if(typeof galleryImages !== 'undefined'){
-	var pswpElement = document.querySelectorAll('.pswp')[0];
+    var pswpElement = document.querySelectorAll('.pswp')[0];
 
-	// define options (if needed)
-	var options = {
-		// optionName: 'option value'
-		// for example:
-		index: 0, // start at first slide
-		arrowKeys : true,
-		closeEl:true,
-		captionEl: true,
-		fullscreenEl: true,
-		zoomEl: true,
-		shareEl: true,
-		counterEl: true,
-		arrowEl: true,
-		preloaderEl: true,
-	};
+    // define options (if needed)
+    var options = {
+        // optionName: 'option value'
+        // for example:
+        index: 0, // start at first slide
+        arrowKeys : true,
+        closeEl:true,
+        captionEl: true,
+        fullscreenEl: true,
+        zoomEl: true,
+        shareEl: true,
+        counterEl: true,
+        arrowEl: true,
+        preloaderEl: true,
+    };
 
-	// Initializes and opens PhotoSwipe
-	var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, galleryImages, options);
+    // Initializes and opens PhotoSwipe
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, galleryImages, options);
 
-	gallery.init();
+    gallery.init();
 }
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
-	var parseThumbnailElements = function(el) {
-		var $el = $(el),
-			items = [];
-				
-		$el.children('figure').each(function(){
-			$child = $(this);
-			
-			item = {
-				src : $child.children('a').attr('href'),
-				w : $child.children('meta[itemprop=width]').attr('content'),
-				h : $child.children('meta[itemprop=height]').attr('content'),
-				title : $child.children('figcaption').html(),
-				msrc :  $child.find('img').attr('src')
-			};
-			
-			items.push(item);
-		});
+    var parseThumbnailElements = function(el) {
+        var $el = $(el),
+            items = [];
+                
+        $el.children('figure').each(function(){
+            $child = $(this);
+            
+            item = {
+                src : $child.children('a').attr('href'),
+                w : $child.children('meta[itemprop=width]').attr('content'),
+                h : $child.children('meta[itemprop=height]').attr('content'),
+                title : $child.children('figcaption').html(),
+                msrc :  $child.find('img').attr('src')
+            };
+            
+            items.push(item);
+        });
   
 
         return items;
@@ -88,20 +88,20 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             gallery = $('#gallery'),
             options,
             items;
-			
+            
         items = parseThumbnailElements(gallery);
 
         // define options (if needed)
         options = {
-			arrowKeys : true,
-			closeEl:true,
-			captionEl: true,
-			fullscreenEl: true,
-			zoomEl: true,
-			shareEl: true,
-			counterEl: true,
-			arrowEl: true,
-			preloaderEl: true,
+            arrowKeys : true,
+            closeEl:true,
+            captionEl: true,
+            fullscreenEl: true,
+            zoomEl: true,
+            shareEl: true,
+            counterEl: true,
+            arrowEl: true,
+            preloaderEl: true,
 
             // define gallery index (for URL)
             galleryUID: gallery.data('pswp-uid'),
@@ -110,7 +110,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 // See Options -> getThumbBoundsFn section of documentation for more info
                 var pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                     rect = $($('#gallery').children('figure').get(index)).find('img')[0].getBoundingClientRect();
-				
+                
                 return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
             }
 
@@ -148,11 +148,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
     };
-	
-	var $gallery = $(gallerySelector);
-	
-    $gallery.data('pswp-uid', 1);	
-	$gallery.find('a').on('click',onThumbnailsClick);
+    
+    var $gallery = $(gallerySelector);
+    
+    $gallery.data('pswp-uid', 1);    
+    $gallery.find('a').on('click',onThumbnailsClick);
 
     // Parse URL and open gallery if it contains #&pid=3&gid=1
     var hashData = photoswipeParseHash();
@@ -178,6 +178,6 @@ $masonryGrid.imagesLoaded().progress( function() {
 });
 
 $('#menu-toggle').on('click', function(){
-	console.log('junge');
-	$('#menu-main').toggle();
+    console.log('junge');
+    $('#menu-main').toggle();
 });
